@@ -2,10 +2,11 @@ import datetime
 import requests
 import platform
 
-_platformSystem = platform.system()
-if _platformSystem == "Darwin":
+platformSystem = platform.system()
+print(platformSystem)
+if platformSystem == "Darwin":
     import os
-elif _platformSystem == "Windows":
+elif platformSystem == "Windows":
     from plyer import notification
 
 def getGlobalIP():
@@ -43,23 +44,11 @@ def checkGlobalIPChangingAndNotification(_globalIP, _previousGlobalIP):
         _message = "New Global IP: " + _globalIP
         if _platformSystem == "Darwin":
             showNotificationOnMac(_message, _title=_title)
-            # showNotificationOnMac("aaa", "bbb", "ccc", "Glass")
-            # os.system("osascript -e 'display notification \"Test\" with title \"Title\" subtitle \"Subtitle\" sound name \"default\"'")
         elif _platformSystem == "Windows":
             showNotificationOnWindows(_message, _title=_title)
-            # notification.notify(
-            #     title="a",
-            #     message="aa",
-            #     app_name="aaa",
-            #     app_icon="k.ico",
-            #     timeout=5
-            # )
 
-        # cmd = 'terminal-notifier -title "Global IP was changed" -message "New Global IP: "' + _globalIP + ' -sound default'
-        # subprocess.run(cmd, shell=True)
         _changedFlag = ", changed"
     else:
-        # print("global IP is still the same")
         _changedFlag = ""
     return _changedFlag
 
