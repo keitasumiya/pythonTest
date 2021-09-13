@@ -3,14 +3,6 @@ import datetime
 import requests
 import platform
 
-def importOSRelatedLibraries():
-    platformSystem = platform.system()
-    if IsPrint: print(platformSystem)
-    if platformSystem == "Darwin":
-        import os
-    elif platformSystem == "Windows":
-        from plyer import notification
-
 def getGlobalIP():
     response = requests.get('https://ifconfig.io/ip')
     _globalIP = ''.join(response.text.splitlines())
@@ -68,7 +60,7 @@ def writeGlobalIPIntoTxt(_checkFileName, _globalIP):
 def mainProcess():
     checkFileName = 'global-ip.txt'
     logFileName = 'global-ip-log.txt'
-    importOSRelatedLibraries()
+    # importOSRelatedLibraries()
     globalIP = getGlobalIP()
     if IsPrint: print(globalIP)
     previousGlobalIP = readPreviousGlobalIP(checkFileName)
@@ -83,5 +75,13 @@ if __name__ == "__main__":
     if len(sys.argv) == 2: 
         if sys.argv[1] == "noPrint": 
             IsPrint = False
+
+    platformSystem = platform.system()
+    if IsPrint: print(platformSystem)
+    if platformSystem == "Darwin":
+        import os
+    elif platformSystem == "Windows":
+        from plyer import notification
+
     mainProcess()
 
