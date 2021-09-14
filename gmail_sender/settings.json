@@ -1,0 +1,9 @@
+{
+    "scopes": ["https://www.googleapis.com/auth/gmail.send"],
+    "gglToken": "token.pickle",
+    "gglJson": "credentials.json",
+    "sender": "1234567890@gmail.com",
+    "to": "1234567890@gmail.com",
+    "subject": "message ttile",
+    "message": "mail text test.\nHello mail test!!"
+}
