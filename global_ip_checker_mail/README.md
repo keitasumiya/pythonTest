@@ -2,7 +2,7 @@
 
 ## Article
 
-https://keitasumiya.net/blog/2021/global_ip_checker_gmail/
+[Global IPの変更をGmail APIを使って通知する](https://keitasumiya.net/blog/2021/global_ip_checker_gmail/)
 
 
 

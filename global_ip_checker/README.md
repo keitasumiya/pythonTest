@@ -1,5 +1,11 @@
 # Global IP Checker
 
+## Article
+
+[Global IPを定期確認する](https://keitasumiya.net/blog/2021/global_ip_checker/)
+
+
+
 ## Requirement
 
 - OS: Mac, Windows

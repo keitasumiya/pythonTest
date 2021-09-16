@@ -1,6 +1,6 @@
 # Gmail-API with Python
 
-## My Article
+## Article
 
 [Gmail APIを使ってPythonでメール送信する](https://keitasumiya.net/blog/gmail-api_python/)
 
