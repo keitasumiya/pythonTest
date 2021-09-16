@@ -1,5 +1,11 @@
 # Global IP Checker with Gmail
 
+## Article
+
+https://keitasumiya.net/blog/2021/global_ip_checker_gmail/
+
+
+
 ## Requirement
 
 - OS: Mac, Windows
