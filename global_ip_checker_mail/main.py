@@ -6,7 +6,7 @@ import json
 import gmailSender
 
 def getGlobalIP():
-    response = requests.get('https://ifconfig.io/ip')
+    response = requests.get('http://inet-ip.info/ip')
     _globalIP = ''.join(response.text.splitlines())
     return _globalIP
 
